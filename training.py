@@ -20,13 +20,24 @@ model_path = os.path.join(config['output_model_path'])
 def train_model():
     
     #use this logistic regression for training
-    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+    logit = LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
                     intercept_scaling=1, l1_ratio=None, max_iter=100,
-                    multi_class='warn', n_jobs=None, penalty='l2',
+                    multi_class='auto', n_jobs=None, penalty='l2',
                     random_state=0, solver='liblinear', tol=0.0001, verbose=0,
                     warm_start=False)
     
     #fit the logistic regression to your data
+    df = pd.read_csv(os.path.join(os.getcwd(), dataset_csv_path, "finaldata.csv"))
+    y = df.pop("exited")
+    corps = df.pop("corporation")
+    model = logit.fit(df, y)
+
+
     
     #write the trained model to your workspace in a file called trainedmodel.pkl
+    path = os.path.join(os.getcwd(), model_path)
+    os.makedirs(path, exist_ok=True)
+    pickle.dump(model, open(os.path.join(path,"trainedmodel.pkl"), 'wb'))
 
+if __name__ == '__main__':
+    train_model()

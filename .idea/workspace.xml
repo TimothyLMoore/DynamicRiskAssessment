@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6c15b3e-9f93-4123-89a6-4722455b8f0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ingestion.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,5 +26,23 @@
   </component>
   <component name="SvnConfiguration">
     <configuration />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Step 1 Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 1 Complete" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2507" y="168" key="CommitChangelistDialog2" timestamp="1644870069942">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2507" y="168" key="CommitChangelistDialog2/0.0.1920.1160/1920.0.1920.1200@1920.0.1920.1200" timestamp="1644870069942" />
+    <state x="2740" y="511" key="Github.Dialog.Accounts.Choose" timestamp="1644870144947">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2740" y="511" key="Github.Dialog.Accounts.Choose/0.0.1920.1160/1920.0.1920.1200@1920.0.1920.1200" timestamp="1644870144947" />
+    <state x="2472" y="319" key="Vcs.Push.Dialog.v2" timestamp="1644870076365">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2472" y="319" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1200@1920.0.1920.1200" timestamp="1644870076365" />
   </component>
 </project>
