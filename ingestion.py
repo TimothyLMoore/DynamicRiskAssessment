@@ -40,6 +40,7 @@ def merge_multiple_dataframe():
     print(os.getcwd()+'\\'+output_folder_path+'\\'+'ingestedfiles.txt')
     for element in allrecords:
          MyFile.write(str(element))
+    MyFile.close()
 
 
 if __name__ == '__main__':
