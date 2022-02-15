@@ -26,7 +26,7 @@ def score_model():
     #calculate a confusion matrix using the test data and the deployed model
     #write the confusion matrix to the workspace
     X = pd.read_csv(os.path.join(os.getcwd(), dataset_csv_path, "testdata.csv"))
-    print(X)
+
     y = X.pop('exited')
     X = X.drop('corporation', axis = 1)
     preds = model_predictions(X)
