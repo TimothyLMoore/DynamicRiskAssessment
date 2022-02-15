@@ -25,11 +25,13 @@ output_path = os.path.join(config['output_model_path'])
 def score_model():
     #calculate a confusion matrix using the test data and the deployed model
     #write the confusion matrix to the workspace
-    preds = model_predictions()
     X = pd.read_csv(os.path.join(os.getcwd(), dataset_csv_path, "testdata.csv"))
+    print(X)
     y = X.pop('exited')
-    cf_matrix = metrics.confusion_matrix(y, preds)
+    X = X.drop('corporation', axis = 1)
+    preds = model_predictions(X)
 
+    cf_matrix = metrics.confusion_matrix(y, preds)
 
     ax = sns.heatmap(cf_matrix, annot=True, cmap='Blues')
 

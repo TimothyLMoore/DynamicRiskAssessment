@@ -21,8 +21,6 @@ def model_predictions(X):
     with open(os.path.join(os.getcwd(), prod_path, "trainedmodel.pkl"), 'rb') as file:
         model = pickle.load(file)
 
-    X.pop('exited')
-    X.pop('corporation')
     predicted=model.predict(X)
 
     return predicted
