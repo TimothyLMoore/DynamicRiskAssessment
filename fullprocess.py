@@ -9,6 +9,7 @@ import reporting
 ##################Check and read new data
 #first, read ingestedfiles.txt
 
+
 #second, determine whether the source data folder has files that aren't listed in ingestedfiles.txt
 
 
