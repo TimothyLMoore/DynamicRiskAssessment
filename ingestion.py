@@ -37,7 +37,7 @@ def merge_multiple_dataframe():
     result.to_csv((os.getcwd()+'\\'+output_folder_path+'\\'+'finaldata.csv'), index=False)
 
     MyFile=open(os.getcwd()+'\\'+output_folder_path+'\\'+'ingestedfiles.txt','w')
-    print(os.getcwd()+'\\'+output_folder_path+'\\'+'ingestedfiles.txt')
+
     for element in allrecords:
          MyFile.write(str(element))
     MyFile.close()
