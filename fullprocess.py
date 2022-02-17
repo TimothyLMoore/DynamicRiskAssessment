@@ -28,10 +28,10 @@ with open(os.path.join(os.getcwd(), prod_path, 'ingestedfiles.txt')) as f:
 ingestedfiles = []
 ingested_split = []
 for i in ingested:
-    ingested_split.append(i.split(","))
+    ingested_split.append(i.split(", "))
 
 for i in ingested_split:
-    ingestedfiles.append(i[1])
+    ingestedfiles.append(i[1].replace("'",""))
 #second, determine whether the source data folder has files that aren't listed in ingestedfiles.txt
 source_files = os.listdir(os.getcwd()+'\\'+source_path)
 has_new_files = False
@@ -68,6 +68,8 @@ new_f1 = score_model(model, new_data)
 if new_f1 > prev_f1:
     print("There is no model drift")
     exit()
+else:
+    print("There is model drift")
 
 
 ##################Re-deployment

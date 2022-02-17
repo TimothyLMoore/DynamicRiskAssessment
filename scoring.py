@@ -35,7 +35,7 @@ def score_model(model, test_data):
 
     score_path = os.path.join(os.getcwd(), model_path, "latestscore.txt")
 
-    with open(score_path, 'w') as f:
+    with open(score_path, 'w+') as f:
         f.write(str(f1score))
 
     return f1score

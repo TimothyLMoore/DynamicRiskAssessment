@@ -23,19 +23,23 @@ def model_predictions(X):
 
     predicted=model.predict(X)
 
-    return predicted
+    return predicted.tolist()
 
 ##################Function to get summary statistics
 def dataframe_summary():
     X = pd.read_csv(os.path.join(os.getcwd(), dataset_csv_path, "finaldata.csv"))
     X = X.drop('corporation', axis = 1)
     X = X.drop('exited', axis = 1)
-    summaryStats=[]
-    summaryStats.append(['Means',X.mean()])
-    summaryStats.append(['Medians',X.median()])
-    summaryStats.append(['Std.Dev.',X.std()])
+    summaryStats= { }
+    for (columnName, columnData) in X.iteritems():
+        summaryStats[columnName+"_mean"] = columnData.mean()
+        summaryStats[columnName+"_median"] = columnData.median()
+        summaryStats[columnName+"_std.dev."] = columnData.std()
+
+
 
     return summaryStats
+
 
 ##################Function to get NA items
 def na_data():

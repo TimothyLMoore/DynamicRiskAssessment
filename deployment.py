@@ -39,9 +39,10 @@ def store_model_into_pickle():
     with open(os.path.join(os.getcwd(), prod_deployment_path, "latestscore.txt"), 'w') as f:
         f.write(str(latestscore))
 
-
-    with open(os.path.join(os.getcwd(), prod_deployment_path, "ingestedfiles.txt"), 'w') as f:
-        f.write(str(ingestedfiles))
+    MyFile=open(os.path.join(os.getcwd(), prod_deployment_path, "ingestedfiles.txt"),'w')
+    for element in ingestedfiles:
+         MyFile.write(str(element)+"\n")
+    MyFile.close()
 
 if __name__ == '__main__':
     store_model_into_pickle()

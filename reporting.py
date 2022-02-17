@@ -45,7 +45,7 @@ def score_model():
 
 
     fig=ax.get_figure()
-    fig.savefig(os.path.join(os.getcwd(), output_path, "confusionmatrix.png"))
+    fig.savefig(os.path.join(os.getcwd(), output_path, "confusionmatrix2.png"))
 
 
 
