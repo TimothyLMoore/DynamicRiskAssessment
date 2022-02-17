@@ -77,6 +77,7 @@ else:
 os.system('python training.py')
 os.system('python scoring.py')
 os.system('python deployment.py')
+
 ##################Diagnostics and reporting
 #run diagnostics.py and reporting.py for the re-deployed model
 os.system('python apicalls.py')
