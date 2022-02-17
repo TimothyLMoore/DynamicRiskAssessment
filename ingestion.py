@@ -39,8 +39,10 @@ def merge_multiple_dataframe():
     MyFile=open(os.getcwd()+'\\'+output_folder_path+'\\'+'ingestedfiles.txt','w')
 
     for element in allrecords:
-         MyFile.write(str(element))
+         MyFile.write(str(element)+"\n")
     MyFile.close()
+
+    return result
 
 
 if __name__ == '__main__':

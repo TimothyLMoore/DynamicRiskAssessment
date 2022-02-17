@@ -26,7 +26,7 @@ def store_model_into_pickle():
         model = pickle.load(file)
 
     with open(os.path.join(os.getcwd(), model_path, "latestscore.txt"), "r") as r:
-        latestscore = r.read().splitlines()
+        latestscore = r.read()
 
     with open(os.path.join(os.getcwd(), dataset_csv_path, "ingestedfiles.txt"), "r") as r:
         ingestedfiles = r.read().splitlines()
